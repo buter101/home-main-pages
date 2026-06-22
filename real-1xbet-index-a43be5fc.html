@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于1xbet · 信息说明页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f0f2f5;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #2c3e50;
+            line-height: 1.65;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        /* hero 区块 – 开场短句 */
+        .hero {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.04), 0 1px 3px rgba(0,0,0,0.06);
+            border: 1px solid #e6e9ed;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: #1e2a3a;
+            margin-bottom: 1.2rem;
+        }
+
+        .hero .lead {
+            font-size: 1.2rem;
+            color: #475569;
+            max-width: 80%;
+        }
+
+        /* 承接段落卡片 */
+        .card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 1.8rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border: 1px solid #e9ecf0;
+            transition: box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: #1e293b;
+            margin-bottom: 1rem;
+            border-left: 4px solid #94a3b8;
+            padding-left: 0.75rem;
+        }
+
+        .card p {
+            margin-bottom: 1rem;
+            color: #334155;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 特点列表 */
+        .feature-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 1.5rem;
+            margin: 1.2rem 0 0.4rem;
+        }
+
+        .feature-list li {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 0.9rem 1rem 0.9rem 1.4rem;
+            border-left: 4px solid #cbd5e1;
+            font-size: 0.98rem;
+            color: #1e293b;
+            transition: background 0.15s;
+        }
+
+        .feature-list li:hover {
+            background: #f1f5f9;
+        }
+
+        /* 场景区块 (延伸阅读) */
+        .scene-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin-top: 0.8rem;
+        }
+
+        .scene-item {
+            flex: 1 1 180px;
+            background: #f9fafb;
+            border-radius: 14px;
+            padding: 1.2rem 1rem;
+            border: 1px solid #e2e8f0;
+        }
+
+        .scene-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 0.4rem;
+            color: #0f172a;
+        }
+
+        .scene-item span {
+            font-size: 0.92rem;
+            color: #475569;
+        }
+
+        /* 提示 / 温和说明 */
+        .notice {
+            background: #fcfcfd;
+            border-left: 5px solid #94a3b8;
+            padding: 1.2rem 1.6rem;
+            border-radius: 12px;
+            margin: 1.8rem 0 0.8rem;
+            color: #2c3e50;
+            border: 1px solid #e9ecf0;
+            border-left-width: 5px;
+        }
+
+        /* FAQ 摘要 (紧凑) */
+        .faq-mini {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 2.2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            border: 1px solid #e9ecf0;
+            margin-bottom: 1.8rem;
+        }
+
+        .faq-mini details {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px solid #f0f2f5;
+            padding-bottom: 0.6rem;
+        }
+
+        .faq-mini details:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .faq-mini summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #1e293b;
+            padding: 0.3rem 0;
+            list-style: inside disclosure-closed;
+        }
+
+        .faq-mini summary::-webkit-details-marker {
+            color: #64748b;
+        }
+
+        .faq-mini details p {
+            margin-top: 0.5rem;
+            color: #475569;
+            font-size: 0.96rem;
+            padding-left: 0.6rem;
+        }
+
+        /* 链接样式 (符合题目要求) */
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px dotted #b4c6e7;
+            transition: border 0.15s;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #2563eb;
+        }
+
+        /* 响应式 */
+        @media (max-width: 700px) {
+            body { padding: 1.2rem 1rem; }
+            .hero { padding: 2rem 1.5rem; }
+            .hero .lead { max-width: 100%; }
+            .card { padding: 1.6rem 1.2rem; }
+            .feature-list { grid-template-columns: 1fr; }
+            .scene-item { flex: 1 1 100%; }
+            .faq-mini { padding: 1.4rem 1.2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.8rem; }
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.87rem;
+            color: #6b7280;
+            margin-top: 2.2rem;
+            padding: 0.8rem 0;
+            border-top: 1px solid #dce1e8;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- hero 开场短句 -->
+    <div class="hero">
+        <h1>日常查询中，一个常被对照的方向</h1>
+        <p class="lead">在整理资料、对比选项或只是浏览信息时，<a href="https://real-1xbet.com">1xbet</a> 这个名字往往会出现在相关清单中。以下内容从查询、对照和延伸阅读的角度做了归纳。</p>
+    </div>
+
+    <!-- 承接段落 -->
+    <div class="card">
+        <h2>从一次普通的搜索开始</h2>
+        <p>你可能只是想在浏览器里确认某个名称的写法，或者看看它关联哪些常见功能。这种日常查询不需要太多前置知识，但如果你打算进一步了解，手边有一份结构清晰的说明会方便很多。</p>
+        <p>这里整理的信息侧重于“它是什么”“通常被怎样描述”以及“常见的对照点”，不涉及操作指引或评价判断。你可以把它当作一块起点，需要更具体的细节时再沿着链接自行延伸。</p>
+    </div>
+
+    <!-- 特点列表 (卡片) -->
+    <div class="card">
+        <h2>几个常被提及的特点</h2>
+        <ul class="feature-list">
+            <li>覆盖多种体育项目与电子竞技</li>
+            <li>界面支持多语言切换</li>
+            <li>提供赛事实时数据与统计</li>
+            <li>账户资金流转渠道相对完备</li>
+            <li>不同地区对应不同版本与合规说明</li>
+            <li>常出现在综合对比文章的比较栏中</li>
+        </ul>
+        <p style="margin-top: 1.2rem; font-size: 0.95rem;">这些特点来自公开资料与用户讨论的常见描述，并非官方承诺。具体功能与可用性请以实际页面为准。</p>
+    </div>
+
+    <!-- 场景：对照与延伸阅读 -->
+    <div class="card">
+        <h2>在哪些场景下会用到对照信息</h2>
+        <div class="scene-grid">
+            <div class="scene-item">
+                <strong>功能对比</strong>
+                <span>把几个平台的界面、项目、速度放在一起看。</span>
+            </div>
+            <div class="scene-item">
+                <strong>术语确认</strong>
+                <span>验证某个功能名称或规则的具体写法。</span>
+            </div>
+            <div class="scene-item">
+                <strong>延伸阅读</strong>
+                <span>从一篇介绍跳到相关的讨论或常见问题。</span>
+            </div>
+            <div class="scene-item">
+                <strong>存档整理</strong>
+                <span>保存一份结构清晰的笔记供以后参考。</span>
+            </div>
+        </div>
+        <p style="margin-top: 1.4rem;">在这些场景里，<a href="https://real-1xbet.com">1xbet</a> 可能只是列表中的一项，但足够让你点进去确认一两个细节。</p>
+    </div>
+
+    <!-- 温和提示 -->
+    <div class="notice">
+        <strong>📎 提示</strong>：本页属于信息整理类内容，不构成任何形式的推荐或担保。网络上的信息变化较快，建议以当前官方页面或最新用户协议为准。理性浏览，按需判断。
+    </div>
+
+    <!-- FAQ 摘要 (轻量) -->
+    <div class="faq-mini">
+        <h2 style="font-size: 1.3rem; font-weight: 500; margin-bottom: 1rem; border-left: none; padding-left: 0;">简短 FAQ 摘要</h2>
+        <details>
+            <summary>这个页面和官方站点是什么关系？</summary>
+            <p>这是独立整理的信息介绍页，与 <a href="https://real-1xbet.com">1xbet</a> 官方无直接关联，仅作为查询对照时的参考。</p>
+        </details>
+        <details>
+            <summary>为什么有的地方看到的信息和这里不同？</summary>
+            <p>不同地区、不同语言版本的内容可能存在差异，且平台会持续更新。建议以实际页面展示为准。</p>
+        </details>
+        <details>
+            <summary>我可以直接通过链接过去吗？</summary>
+            <p>可以，上面已经提供了指向 <a href="https://real-1xbet.com">1xbet</a> 的链接，点击即可。但请留意网络环境与访问限制。</p>
+        </details>
+    </div>
+
+    <!-- 结尾：温和收束 -->
+    <div class="card" style="margin-bottom: 0.5rem;">
+        <p style="font-style: normal; color: #3c4a5b;">整理完这些内容，回到最初的问题：你当时想查什么？也许只是一行文字、一个对比项，或是想确认某个名字的写法。这篇说明页能做的，就是帮你快速定位到那个起点，剩下的延伸阅读，就交给链接和好奇心吧。</p>
+    </div>
+
+    <div class="footer-note">
+        © 信息整理 · 仅供对照参考 · 请自行核实最新细节
+    </div>
+
+</div>
+</body>
+</html>
