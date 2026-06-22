@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1xbet 简介 – 快速了解平台用途</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f3f6fa;
+            color: #1a1e26;
+            line-height: 1.6;
+        }
+
+        /* ——— 深色头图 ——— */
+        .hero {
+            background: linear-gradient(135deg, #0b1628 0%, #1d2a44 100%);
+            color: #eef3f8;
+            padding: 4rem 2rem 3.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 280px;
+            height: 280px;
+            background: radial-gradient(circle, rgba(255, 200, 50, 0.08), transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.6rem;
+        }
+
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #bccad8;
+            max-width: 520px;
+            margin: 0 auto;
+            line-height: 1.5;
+        }
+
+        .hero .brand-tag {
+            display: inline-block;
+            margin-top: 1.3rem;
+            padding: 0.45rem 1.5rem;
+            border: 1px solid rgba(255, 200, 50, 0.5);
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #f7d87a;
+            background: rgba(255, 200, 50, 0.06);
+            letter-spacing: 0.3px;
+        }
+
+        /* ——— 浅色正文区 ——— */
+        .content-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 3rem 1.8rem 5rem;
+        }
+
+        /* 用途卡片 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3.2rem;
+        }
+
+        .card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 1.6rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 4px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e6edf4;
+            transition: transform 0.18s ease, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 20, 40, 0.06);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #16212e;
+            letter-spacing: -0.01em;
+        }
+
+        .card h3 span {
+            display: inline-block;
+            margin-right: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            font-size: 0.95rem;
+            color: #36434f;
+        }
+
+        /* 适合人群 + 自然链接段落 */
+        .section-block {
+            margin: 2.6rem 0 2.2rem;
+        }
+
+        .section-block h2 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: #101a26;
+            border-left: 4px solid #c89b3c;
+            padding-left: 1rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .section-block p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #1e2a36;
+        }
+
+        .audience-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .audience-tag {
+            background: #eef2f7;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #1f2d3b;
+            border: 1px solid #d9e2ec;
+        }
+
+        /* 强调色链接 */
+        a {
+            color: #2266aa;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1px;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #c89b3c;
+            text-decoration-color: #c89b3c;
+        }
+
+        .link-inline {
+            word-break: break-word;
+        }
+
+        /* 提示 / FAQ 摘要 */
+        .faq-note {
+            background: #f9fbfd;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            margin: 2.8rem 0 2rem;
+            border: 1px solid #dfe8f0;
+        }
+
+        .faq-note h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #0b1b2b;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-note p {
+            font-size: 0.95rem;
+            color: #2d3b49;
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-note .small-meta {
+            color: #6b7a89;
+            font-size: 0.85rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #dce5ed;
+            margin: 2.8rem 0 0.6rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: #687886;
+            text-align: center;
+            padding: 1.2rem 0 0.8rem;
+        }
+
+        /* ——— 响应式 ——— */
+        @media (max-width: 640px) {
+            .hero {
+                padding: 3rem 1.2rem 2.5rem;
+            }
+            .hero h1 {
+                font-size: 1.7rem;
+            }
+            .content-wrap {
+                padding: 2rem 1.2rem 4rem;
+            }
+            .card-grid {
+                gap: 1.2rem;
+            }
+            .card {
+                padding: 1.5rem 1.2rem;
+            }
+            .faq-note {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <h1>1xbet · 用途速览</h1>
+        <p class="sub">一个整合了体育竞猜、娱乐游戏与即时数据的平台，适合想快速了解其功能的用户。</p>
+        <span class="brand-tag">信息卡片式介绍</span>
+    </section>
+
+    <div class="content-wrap">
+
+        <!-- 用途卡片 -->
+        <div class="card-grid">
+            <div class="card">
+                <h3><span>⚽</span>体育竞猜</h3>
+                <p>覆盖足球、篮球、网球等主流赛事，以及各类联赛与杯赛。用户可以通过实时赔率与统计数据辅助判断。</p>
+            </div>
+            <div class="card">
+                <h3><span>🎰</span>游戏与娱乐</h3>
+                <p>包含老虎机、真人荷官、棋牌、虚拟体育等数字娱乐项目，界面简洁，分类清晰。</p>
+            </div>
+            <div class="card">
+                <h3><span>📊</span>数据与资讯</h3>
+                <p>提供赛事前瞻、历史对比、走势图等基础信息，帮助用户更从容地了解比赛背景。</p>
+            </div>
+        </div>
+
+        <!-- 适合人群 -->
+        <div class="section-block">
+            <h2>适合哪些用户</h2>
+            <p>无论你是体育爱好者，还是偶尔想尝试一些线上娱乐消遣，<a href="https://true-1xbet.com" class="link-inline">1xbet</a> 所提供的功能都偏向直观与丰富。平台并不预设用户必须具有特定经验，新手也可以通过清晰的导航找到自己感兴趣的部分。</p>
+
+            <div class="audience-list">
+                <span class="audience-tag">体育赛事关注者</span>
+                <span class="audience-tag">休闲娱乐玩家</span>
+                <span class="audience-tag">追求界面整洁的用户</span>
+                <span class="audience-tag">数字游戏爱好者</span>
+            </div>
+            <p>当然，任何涉及资金或决策的行为都应保持理性。了解规则、控制时间与投入，是更健康的使用方式。</p>
+        </div>
+
+        <!-- 自然链接段落 + 额外说明 -->
+        <div class="section-block">
+            <h2>从快速识别出发</h2>
+            <p>很多新用户打开一个网站，最直接的需求是弄清楚它能做什么。拿 <a href="https://true-1xbet.com">1xbet</a> 举例，首页通常直接展示体育赛事列表与热门游戏入口，不会让用户翻找很久。这种布局降低了初期的困惑感。</p>
+            <p>另外，平台支持多种语言与支付方式，这也是它被不同地区用户提及的原因之一。不过需要注意，每个国家或地区的法规不同，使用前建议自行确认当地相关规定。</p>
+        </div>
+
+        <!-- 提示 / FAQ 摘要 -->
+        <div class="faq-note">
+            <h3>❓ 常见疑问摘要</h3>
+            <p><strong>是否需要注册才能浏览？</strong> 大部分赛事与游戏预览无需登录，但参与竞猜或游戏需要创建账户。</p>
+            <p><strong>移动设备体验如何？</strong> 网站适配手机与平板，菜单经过折叠设计，主要功能均可通过触屏操作。</p>
+            <p><strong>有新手引导吗？</strong> 平台设有基础的规则说明与帮助中心，具体玩法可参考对应页面。如果仍有疑问，建议先查看官方常见问题。</p>
+            <p class="small-meta">以上摘要基于公开信息整理，不构成任何使用建议。</p>
+        </div>
+
+        <hr>
+
+        <div class="footer-note">
+            本文档仅为用途介绍，不代表官方立场。请根据个人情况合理选择。
+        </div>
+
+    </div>
+
+</body>
+</html>
